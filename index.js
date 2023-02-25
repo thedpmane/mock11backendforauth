@@ -14,7 +14,9 @@ process.on("uncaughtException", (err) => {
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
-
+app.use("/", (req, res, next) => {
+  res.send("welcome to auth app")
+})
 // Connecting to database
 connectDatabase();
 
