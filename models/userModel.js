@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
     maxLength: [10, "Password should be greater than 10 characters"],
     select: false,
   },
-  Address: {
+  address: {
     type: String,
     maxLength: [30, "Address should be greater than 40 characters"],
     select: false,
